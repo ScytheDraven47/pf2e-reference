@@ -1,0 +1,166 @@
+[
+	{
+		"name": "Mage Hand",
+		"type": "Cantrip",
+		"level": 1,
+		"list": "Arcane",
+		"traits": ["cantrip", "evocation"],
+		"traditions": ["arcane", "occult"],
+		"components": ["somatic", "verbal"],
+		"actions": 2,
+		"range": 30,
+		"target": "1 unattended object of light Bulk or less",
+		"duration": "sustained",
+		"description": "You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you're levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls.",
+		"heightened": [
+			{
+				"level": 3,
+				"effect": "You can target an unattended object with a Bulk of 1 or less."
+			},
+			{
+				"level": 5,
+				"effect": "The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less."
+			},
+			{
+				"level": 7,
+				"effect": "The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less."
+			}
+		]
+	},
+	{
+		"name": "Tree Shape",
+		"type": "Spell",
+		"level": 2,
+		"list": "Primal",
+		"traits": ["plant", "polymorph", "transmutation"],
+		"traditions": ["primal"],
+		"components": ["somatic", "verbal"],
+		"actions": 2,
+		"duration": "8 hours",
+		"description": "You transform into a Large tree. Perception checks don't reveal your true nature, but a successful Nature or Survival check against your spell DC reveals that you appeaer to be a tree that is strangely new to the area. While in tree form, you can observe everything around you, but you can't act other than to end the spell, and your turn, by using a single action, which has the concentrate trait. As a tree, your AC is 20, and only status bonuses, status penalties, circumstance bonuses, and circumstance penalties affect you. Any successess and critical successes you roll on Reflex saves are failures."
+	},
+	{
+		"name": "Dragon, Adult Green",
+		"type": "Creature",
+		"level": 12,
+		"traits": ["le", "huge", "amphibious", "dragon"],
+		"perception": 22,
+		"senses": ["darkvision", "scent (imprecise) 60 feet"],
+		"languages": ["Common", "Draconic", "Elven", "Sylvan"],
+		"skills": {
+			"acrobatics": 19,
+			"arcana": 22,
+			"athletics": 24,
+			"deception": 19,
+			"diplomacy": 23,
+			"intimidation": 23,
+			"nature": 20,
+			"occultism": 24,
+			"society": 22,
+			"stealth": 21
+		},
+		"abilities": {
+			"str": 6,
+			"dex": 3,
+			"con": 3,
+			"int": 4,
+			"wis": 4,
+			"cha": 5
+		},
+		"ac": 34,
+		"saves": {
+			"fort": 20,
+			"ref": 22,
+			"will": 23,
+			"additional": ["+1 status to all saves vs. magic"]
+		},
+		"hp": 215,
+		"immunities": ["paralyzed", "poison", "sleep"],
+		"resistances": [["fire", 4]],
+		"weaknesses": [["cold", 2]],
+		"features": [
+			{
+				"name": "Frightful Presence",
+				"description": "(aura, emotion, fear, mental) 90 feet, DC 31"
+			}
+		],
+		"reactions": [
+			{
+				"name": "Twisting Tail",
+				"trigger": "A creature within reach of the dragon's tail uses a move action or leaves a square during a move action it's using.",
+				"effect": "The dragon makes a tail Strike at the creature with a -2 penalty. If it hits, the dragon disrupts the creature's action."
+			}
+		],
+		"movement": {
+			"speed": 40,
+			"fly": 160,
+			"swim": 40,
+			"additional": ["trackless step", "woodland stride"]
+		},
+		"actions": [
+			{
+				"name": "Melee",
+				"actions": 1,
+				"weapon": "jaws",
+				"toHit": 26,
+				"traits": ["magical", "poison", "reach 15 feet"],
+				"damage": "3d10+12 piercing plus 3d4 poison"
+			},
+			{
+				"name": "Melee",
+				"actions": 1,
+				"weapon": "claw",
+				"toHit": 26,
+				"traits": ["agile", "magical", "reach 10 feet"],
+				"damage": "3d8+12 slashing"
+			},
+			{
+				"name": "Melee",
+				"actions": 1,
+				"weapon": "tail",
+				"toHit": 24,
+				"traits": ["magical", "reach 20 feet"],
+				"damage": "3d8+10 bludgeoning"
+			},
+			{
+				"name": "Melee",
+				"actions": 1,
+				"weapon": "horn",
+				"toHit": 24,
+				"traits": ["magical", "reach 15 feet"],
+				"damage": "2d8+10 piercing"
+			},
+			{
+				"name": "Breath Weapon",
+				"actions": 2,
+				"traits": ["arcane", "evocation", "poison"],
+				"description": "The dragon breathes a toxic cloud that deals 13d6 poison damage in a 50-foot cone (DC 31 basic Fortitude save). It can't use Breath Weapon again for 1d4 rounds."
+			},
+			{
+				"name": "Draconic Frenzy",
+				"actions": 2,
+				"description": "The dragon makes two claw Strikes and one horn Strike in any order."
+			},
+			{
+				"name": "Draconic Momentum",
+				"description": "See Pathfinder Bestiary page 110."
+			},
+			{
+				"name": "Trackless Step",
+				"description": "The green dragon always gains the benefits of Cover Tracks in natural surroundings, even while moving at full speed."
+			},
+			{
+				"name": "Woodland Stride",
+				"description": "The green dragon ignores difficult terrain and greater difficult terrain from non-magical foliage."
+			}
+		],
+		"magic": {
+			"dc": 32,
+			"spells": {
+				"At Will": ["charm"],
+				"2": ["entangle", "entangle"],
+				"4": ["suggestion"]
+			}
+		}
+	}
+]
